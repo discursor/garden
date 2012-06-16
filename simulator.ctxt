@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=args
+comment0.target=void\ main(java.lang.String[])
+comment1.params=userInput\ prompt
+comment1.target=int\ getUserNum(java.util.Scanner,\ java.lang.String)
+comment2.params=userInput\ prompt
+comment2.target=boolean\ getYN(java.util.Scanner,\ java.lang.String)
+comment3.params=xsize\ ysize\ plants\ showGraphic\ showNum
+comment3.target=void\ loop(int,\ int,\ int,\ boolean,\ boolean)
+numComments=4

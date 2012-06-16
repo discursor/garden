@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ InitGarden()
+comment1.params=xsizex\ ysizex\ plantsx
+comment1.target=Garden(int,\ int,\ int)
+comment2.params=x\ y
+comment2.target=void\ createNeighbors(int,\ int)
+comment3.params=
+comment3.target=boolean\ Run()
+comment4.params=
+comment4.target=java.lang.String\ toString()
+comment5.params=showGraphic\ showNum
+comment5.target=java.lang.String\ toString(boolean,\ boolean)
+comment6.params=
+comment6.target=void\ PrintGarden()
+comment7.params=showGraphic\ showNum
+comment7.target=void\ PrintGarden(boolean,\ boolean)
+numComments=8
