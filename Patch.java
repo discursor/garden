@@ -1,8 +1,11 @@
 
 /**
- * Write a description of class Patch here.
+ * The Patch is the fundemntal unit that the Garden is made up of. A patch can
+ * absorb chemicals, spread chemicals, and decompose dead plants. It knows if
+ * it has a plant on it, what neighbors it has, and contains information on how
+ * much chemical it has. Running the patch runs whatever occupant it has.
  * 
- * @author (your name) 
+ * @author Ravi Tadinada 
  * @version (a version number or a date)
  */
 public class Patch {
@@ -44,7 +47,6 @@ public class Patch {
     public void growPlant() {
         Plant temp = new Plant(this);
         occupant = temp;
-        System.out.println(this.hasPlant());
     }
     
     /**

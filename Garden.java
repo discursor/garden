@@ -1,9 +1,11 @@
 import java.util.Random;
 /**
- * Write a description of class Garden here.
+ * The Garden class is a 2D array of Patches. It sets up all of the Patches with their
+ * neighbors, runs each patch, and can print out an image of the the 2D Patch array,
+ * showing where there are Plants and where not.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Ravi Tadinada 
+ * @version 6/15/2012
  */
 public class Garden
 {

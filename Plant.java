@@ -1,9 +1,12 @@
 import java.util.Random;
 /**
- * Write a description of class Plant here.
+ * The Plant class contains all the vitals of a plants and what it does.Namely, secrete
+ * a chemical into the ground to tell other plants that it's there, detect chemicals
+ * that other plants secrete, and, if the detected chemical is higher than the
+ * threshold, possibly die.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Ravi Tadinada 
+ * @version 6/15/2012
  */
 public class Plant {
     // Instance variables
@@ -24,7 +27,7 @@ public class Plant {
     public Plant() {
         Random randomGenerator = new Random();
         int secretionx = randomGenerator.nextInt(3) + 1;
-        setSecretion(2);
+        setSecretion(secretionx);
         alive = true;
         ground = null;
     }
@@ -37,7 +40,7 @@ public class Plant {
         this();
         
         ground = groundx;
-        this.Secrete();
+        this.secreteChemical();
     }
     
     
@@ -54,7 +57,7 @@ public class Plant {
         if(ground != null)
             ground.removePlant();
         ground = groundx;
-        this.Secrete();
+        this.secreteChemical();
     }
     
     
@@ -76,10 +79,14 @@ public class Plant {
     /**
      * Simulates the plant secreting the chemical
      */
-    public void Secrete() {
+    public void secreteChemical() {
         if(this.ground != null){
             ground.spreadChemical(secretion);
         }
+    }
+    
+    public int detectChemical() {
+        return ground.getchemicalLevel();
     }
     
     /**
@@ -87,7 +94,7 @@ public class Plant {
      */
     public void Run() {
         Random randomGenerator = new Random();
-        if(ground.getchemicalLevel() >= threshold && randomGenerator.nextInt(2) == 0) {
+        if(this.detectChemical() >= threshold && randomGenerator.nextInt(2) == 0) {
             this.Die();
         }
     }
